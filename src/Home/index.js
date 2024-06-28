@@ -15,16 +15,16 @@ export default function Home(){
         let imc = (peso/(altura*altura)).toFixed(2)
 
         if(imc > 18.5 && imc < 25){
-            setResultadoImc('Você está no peso ideal, parabéns!')
+            setResultadoImc('Você está no peso ideal!')
         }
         else if(imc >= 25 && imc < 30){
-            setResultadoImc('Você está acima do peso, melhor fazer uma dieta!')
+            setResultadoImc('Você está acima do peso!')
         }
         else if(imc >= 30){
-            setResultadoImc('Seu resultado indica obesidade. Procure um médico!')
+            setResultadoImc('Seu resultado indica obesidade!')
         }
         else{
-            setResultadoImc('Você está abaixo do peso ideal. Isso não é bom!')
+            setResultadoImc('Você está abaixo do peso ideal!')
         }
 
         setImc(imc)
@@ -39,7 +39,7 @@ export default function Home(){
             <form className='form' onSubmit={calculaImc}>
                 <input 
                     required
-                    type="number"R
+                    type="number"
                     placeholder="Digite seu peso..." 
                     value={peso}
                     onChange={(e) => setPeso(e.target.value)} 
